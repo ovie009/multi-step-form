@@ -1,0 +1,29 @@
+.footer{
+    height: 80px;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row-reverse;
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+}
+
+.footer button{
+    outline: none;
+    border: none;
+    font-weight: 700;
+}
+
+.back_button{
+    background-color: transparent;
+    color: hsl(231, 11%, 63%);
+}
+
+.next_button{
+    background-color: hsl(213, 96%, 18%);
+    color: white;
+    padding-inline: 20px;
+    border-radius: 5px;
+}

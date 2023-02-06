@@ -1,0 +1,50 @@
+
+
+.sidebar{
+    height: 25vh;
+    width: 100%;
+    background-image: url('../assets/images/bg-sidebar-mobile.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.steps{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    padding-block: 30px;
+}
+
+.steps li{
+    list-style: none;
+    width: 20px;
+}
+
+.steps li strong{
+    display: none;
+}
+
+.step_label{
+    display: none;
+}
+
+.numbering{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: transparent;
+    display: grid;
+    place-items: center;
+    color: white;
+    border: 1px solid white;
+    font-weight: 500;
+}
+
+.active_number{
+    color: black;
+    background-color: hsl(206, 94%, 87%);
+}

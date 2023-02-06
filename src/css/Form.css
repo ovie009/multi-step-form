@@ -1,0 +1,12 @@
+form{
+    width: 90%;
+    background-color: white;
+    border-radius: 10px;
+    margin-top: -20%;
+    padding: 40px 20px;
+    display: flex;
+    flex-flow: column;
+    gap: 20px;
+    box-shadow: 0 10px 20px 2px hsl(229, 24%, 87%);
+    /* box-shadow: 0 10px 10px 10px red; */
+}
