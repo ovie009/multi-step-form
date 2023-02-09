@@ -12,20 +12,26 @@
     gap: 5px;
 }
 
-label{
+.input_group label{
     color: hsl(213, 96%, 18%);
     font-size: small;
     font-weight: 500;
+    display: flex;
+    justify-content: space-between;
 }
 
 input{
     padding: 12.5px;
     outline: none;
-    border: 1px solid hsl(229, 24%, 87%);
+    border: 1px solid;
     border-radius: 5px;
 }
 
 ::placeholder{
     font-weight: 700;
     color: hsl(231, 11%, 63%);
+}
+
+.empty_fields{
+    color: red;
 }
