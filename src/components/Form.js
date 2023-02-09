@@ -2,7 +2,7 @@ import PersonalInfo from "./PersonalInfo";
 import '../css/Form.css';
 import {useState} from 'react';
 import FooterButtons from './FooterButtons';
-
+import Plan from './Plan';
 
 function Form({step, setStep}) {
 
@@ -41,6 +41,10 @@ function Form({step, setStep}) {
             return (
                 // return personal info form inputs
                 <PersonalInfo updateName={updateName} updateEmail={updateEmail} updatePhone={updatePhone} emptyName={emptyName} emptyEmail={emptyEmail} emptyPhone={emptyPhone}/>
+            );
+        } else if (step === 2) {
+            return (
+                <Plan />
             );
         }
     }

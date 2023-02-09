@@ -10,3 +10,11 @@ form{
     box-shadow: 0 10px 20px 2px hsl(229, 24%, 87%);
     /* box-shadow: 0 10px 10px 10px red; */
 }
+
+.form_heading{
+    color: hsl(213, 96%, 18%);
+}
+
+.form_paragraph{
+    color: hsl(231, 11%, 63%);
+}   

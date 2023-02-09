@@ -1,5 +1,5 @@
+import "../css/Form.css";
 import "../css/PersonalInfo.css";
-// import {useState} from 'react';
 
 function PersonalInfo({updateName, updateEmail, updatePhone, emptyName, emptyEmail, emptyPhone}) {
 

@@ -1,0 +1,85 @@
+.plans_wrapper{
+    display: flex;
+    flex-flow: column;
+    gap: 10px;
+}
+
+.plans_wrapper button{
+    display: flex;
+    padding: 10px;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+    border-radius: 10px;
+    border: 1px solid hsl(229, 24%, 87%);
+    height: 75px;
+    background-color: white;
+}
+
+.plan_text_wrapper{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    gap: 5px;
+    align-items: flex-start;
+}
+
+.plan_text_wrapper strong{
+    font-size: 1.2em;
+    color: hsl(213, 96%, 18%);
+}
+
+.plan_text_wrapper span{
+    color: hsl(231, 11%, 63%);
+    font-weight: 700;
+}
+
+.active_plan{
+    border-color: hsl(243, 100%, 62%) !important;
+    background-color: hsl(217, 100%, 97%) !important;
+}
+
+.toggle_wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    background-color: hsl(217, 100%, 97%);
+    border-radius: 10px;
+    position: relative;
+}
+
+.toggle_wrapper strong{
+    padding-inline: 20px;
+    font-size: .9em;
+}
+
+.toggle_wrapper strong:last-child{
+    color: hsl(231, 11%, 63%);
+}
+
+.toggle_wrapper button{
+    width: 20px;
+    height: 20px;
+    background-color: hsl(213, 96%, 18%);
+    border: none;
+    outline: transparent;
+}
+
+.monthly_toggle{
+    border-radius: 10px 0 0 10px;
+}
+
+.yearly_toggle{
+    border-radius: 0 10px 10px 0;
+}
+
+.toggle_circle{
+    position: absolute;
+    border-radius: 50%;
+    width: 12.5px;
+    height: 12.5px;
+    background-color: white;
+    transform: translateX(-2.5px);
+    /* transform: translateX(15px);  */
+}
