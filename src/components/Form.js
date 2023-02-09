@@ -12,6 +12,8 @@ function Form({step, setStep}) {
     const [emptyName, setEmptyName] = useState(false);
     const [emptyEmail, setEmptyEmail] = useState(false);
     const [emptyPhone, setEmptyPhone] = useState(false);
+    const [plan, setPlan] = useState('Arcade');
+    const [duration, setDuration] = useState('monthly');
 
     // function to update name state
     // also updates name empty input status
@@ -44,7 +46,7 @@ function Form({step, setStep}) {
             );
         } else if (step === 2) {
             return (
-                <Plan />
+                <Plan plan={plan} setPlan={setPlan} duration={duration} setDuration={setDuration}  />
             );
         }
     }

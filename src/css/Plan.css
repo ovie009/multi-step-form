@@ -6,13 +6,13 @@
 
 .plans_wrapper button{
     display: flex;
-    padding: 10px;
+    padding: 20px 10px;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
     gap: 15px;
     border-radius: 10px;
     border: 1px solid hsl(229, 24%, 87%);
-    height: 75px;
+    min-height: 75px;
     background-color: white;
 }
 
@@ -26,12 +26,17 @@
 
 .plan_text_wrapper strong{
     font-size: 1.2em;
-    color: hsl(213, 96%, 18%);
 }
 
 .plan_text_wrapper span{
     color: hsl(231, 11%, 63%);
     font-weight: 700;
+}
+
+.plan_text_wrapper em{
+    color: hsl(213, 96%, 18%);
+    font-weight: 700;
+    font-style: normal;
 }
 
 .active_plan{
@@ -81,5 +86,6 @@
     height: 12.5px;
     background-color: white;
     transform: translateX(-2.5px);
+    transition: .25s ease-in;
     /* transform: translateX(15px);  */
 }
