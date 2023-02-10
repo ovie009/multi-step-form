@@ -1,40 +1,64 @@
 
 import "../css/FooterButtons.css"
 
-const FooterButtons = ({step, setStep, name, email, phone, setEmptyName, setEmptyEmail, setEmptyPhone, confirm, setConfirm}) => {
+const FooterButtons = ({data, setData, step, setStep}) => {
 
     const nextStep = () => {
-        setConfirm(false);
         if(step === 1) {
-            let emptyFields = false;
-            if(name === '') {
-                setEmptyName(true);
-                emptyFields = true;
+            let emptyName = false;
+            let emptyEmail = false;
+            let emptyPhone = false;
+            if(data.name === '') {
+                emptyName = true;
+                setData(prevData => {
+                    return{
+                        ...prevData,
+                        emptyName: emptyName
+                    }
+                })
             }
-            if(email === '') {
-                setEmptyEmail(true);
-                emptyFields = true;
+            if(data.email === '') {
+                emptyEmail = true;
+                setData(prevData => {
+                    return{
+                        ...prevData,
+                        emptyEmail: emptyEmail
+                    }
+                })
             }
-            if(phone === '') {
-                setEmptyPhone(true);
-                emptyFields = true;
+            if(data.phone === '') {
+                emptyPhone = true;
+                setData(prevData => {
+                    return{
+                        ...prevData,
+                        emptyPhone: emptyPhone
+                    }
+                })
             }
-            if (emptyFields === true) return setStep(step);
+            if (emptyName || emptyEmail || emptyPhone ) return setStep(step);
         }
         if(step === 4) return setStep(step);
         setStep(prevStep => ++prevStep);
     }
     
     const goBack = () => {
-        setConfirm(false);
         if(step === 1) return setStep(step);
         setStep(prevStep => --prevStep);
     }
 
-    return !confirm && ( 
+    const handleConfirm = () => {
+        setData(prevData => {
+            return {
+                ...prevData,
+                confirm: true
+            }
+        })
+    }
+
+    return !data.confirm && ( 
         <footer className="footer">
 
-            {step !== 4 ? (<button onClick={nextStep} className="next_button">Next Step</button>) : (<button className="confirm_button" onClick={() => setConfirm(true)}>Confirm</button>)}
+            {step !== 4 ? (<button onClick={nextStep} className="next_button">Next Step</button>) : (<button className="confirm_button" onClick={() => handleConfirm()}>Confirm</button>)}
             
             {step !== 1 ? (<button onClick={goBack} className="back_button">Go Back</button>) : (<></>)}
             

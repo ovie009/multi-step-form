@@ -1,32 +1,32 @@
 import '../css/Finishing.css';
 import { useState } from 'react';
 
-const Finishing = ({ setStep, plan, online, storage, profile, duration }) => {
+const Finishing = ({ data, setStep }) => {
 
     const [basePrice] = useState(() => {
-        if (plan === 'Arcade' && duration === 'monthly') return 9;
-        if (plan === 'Arcade' && duration === 'yearly') return 90;
-        if (plan === 'Advanced' && duration === 'monthly') return 12;
-        if (plan === 'Advanced' && duration === 'yearly') return 120;
-        if (plan === 'Pro' && duration === 'monthly') return 15;
-        if (plan === 'Pro' && duration === 'yearly') return 150;
+        if (data.plan === 'Arcade' && data.duration === 'monthly') return 9;
+        if (data.plan === 'Arcade' && data.duration === 'yearly') return 90;
+        if (data.plan === 'Advanced' && data.duration === 'monthly') return 12;
+        if (data.plan === 'Advanced' && data.duration === 'yearly') return 120;
+        if (data.plan === 'Pro' && data.duration === 'monthly') return 15;
+        if (data.plan === 'Pro' && data.duration === 'yearly') return 150;
     })
 
     const [onlinePrice] = useState(() => {
-        if (online === true && duration === 'monthly') return 1;
-        if (online === true && duration === 'yearly') return 10;
+        if (data.addOns.online === true && data.duration === 'monthly') return 1;
+        if (data.addOns.online === true && data.duration === 'yearly') return 10;
         return 0;
     })
 
     const [storagePrice] = useState(() => {
-        if (storage === true && duration === 'monthly') return 2;
-        if (storage === true && duration === 'yearly') return 20;
+        if (data.addOns.storage === true && data.duration === 'monthly') return 2;
+        if (data.addOns.storage === true && data.duration === 'yearly') return 20;
         return 0;
     })
 
     const [profilePrice] = useState(() => {
-        if (profile === true && duration === 'monthly') return 2;
-        if (profile === true && duration === 'yearly') return 20;
+        if (data.addOns.profile === true && data.duration === 'monthly') return 2;
+        if (data.addOns.profile === true && data.duration === 'yearly') return 20;
         return 0;
     })
 
@@ -39,27 +39,27 @@ const Finishing = ({ setStep, plan, online, storage, profile, duration }) => {
             <ul className="bill">
                 <li>
                     <div className="main_bill_wrapper">
-                        <strong>{plan}({duration})</strong>
+                        <strong>{data.plan}({data.duration})</strong>
                         <button onClick={() => setStep(2)}>change</button>
                     </div>
-                    <strong>${basePrice}/{duration === 'monthly' ? 'mo' : 'yr'}</strong>
+                    <strong>${basePrice}/{data.duration === 'monthly' ? 'mo' : 'yr'}</strong>
                 </li>
-                { online && <li>
+                { data.addOns.online && <li>
                         <span>Online Service</span>
-                        <strong>+${onlinePrice}/{duration === 'monthly' ? 'mo' : 'yr'}</strong>
+                        <strong>+${onlinePrice}/{data.duration === 'monthly' ? 'mo' : 'yr'}</strong>
                 </li> }
-                { storage && <li>
+                { data.addOns.storage && <li>
                         <span>Larger storage</span>
-                        <strong>+${storagePrice}/{duration === 'monthly' ? 'mo' : 'yr'}</strong>
+                        <strong>+${storagePrice}/{data.duration === 'monthly' ? 'mo' : 'yr'}</strong>
                 </li> }
-                { profile && <li>
+                { data.addOns.profile && <li>
                         <span>Customizable profile</span>
-                        <strong>+${profilePrice}/{duration === 'monthly' ? 'mo' : 'yr'}</strong>
+                        <strong>+${profilePrice}/{data.duration === 'monthly' ? 'mo' : 'yr'}</strong>
                 </li> }
             </ul>
             <div className="total_wrapper">
-                <span>Total (per {duration === 'monthly' ? 'month' : 'year'})</span>
-                <strong>+${total}/{duration === 'monthly' ? 'mo' : 'yr'}</strong>
+                <span>Total (per {data.duration === 'monthly' ? 'month' : 'year'})</span>
+                <strong>+${total}/{data.duration === 'monthly' ? 'mo' : 'yr'}</strong>
             </div>
         </>
     );

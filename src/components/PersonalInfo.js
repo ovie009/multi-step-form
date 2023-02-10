@@ -1,7 +1,46 @@
 import "../css/Form.css";
 import "../css/PersonalInfo.css";
 
-function PersonalInfo({name, email, phone, updateName, updateEmail, updatePhone, emptyName, emptyEmail, emptyPhone}) {
+function PersonalInfo({data, setData}) {
+
+    const updateName = (input) => {
+        let emptyField;
+        if (input === '') emptyField = true;
+        else emptyField = false; 
+        setData(prevData => {
+            return{
+                ...prevData,
+                name: input,
+                emptyName: emptyField,
+            }
+        })
+    }
+
+    const updatePhone = (input) => {
+        let emptyField;
+        if (input === '') emptyField = true;
+        else emptyField = false; 
+        setData(prevData => {
+            return{
+                ...prevData,
+                phone: input,
+                emptyPhone: emptyField,
+            }
+        })
+    }
+
+    const updateEmail = (input) => {
+        let emptyField;
+        if (input === '') emptyField = true;
+        else emptyField = false; 
+        setData(prevData => {
+            return{
+                ...prevData,
+                email: input,
+                emptyEmail: emptyField,
+            }
+        })
+    }
 
     return (
         <>
@@ -10,15 +49,15 @@ function PersonalInfo({name, email, phone, updateName, updateEmail, updatePhone,
             <div className="input_group">
                 <label htmlFor="name">
                     <strong>Name</strong>
-                    {emptyName && <span className="empty_fields">This field is required</span> }
+                    {data.emptyName && <span className="empty_fields">This field is required</span> }
                 </label>
                 <input 
                     type="text" 
                     id="name" 
-                    value={name}
+                    value={data.name}
                     placeholder="e.g Stephen King"
                     style={{
-                        borderColor: `${emptyName ? "red" : "hsl(229, 24%, 87%)"}`
+                        borderColor: `${data.emptyName ? "red" : "hsl(229, 24%, 87%)"}`
                     }}
                     onChange={event => updateName(event.target.value)}
                     />
@@ -26,15 +65,15 @@ function PersonalInfo({name, email, phone, updateName, updateEmail, updatePhone,
             <div className="input_group">
                 <label htmlFor="email">
                     <strong>Email Address</strong>
-                    {emptyEmail && <span className="empty_fields">This field is required</span> }
+                    {data.emptyEmail && <span className="empty_fields">This field is required</span> }
                 </label>
                 <input 
                     type="email" 
                     id="email" 
-                    value={email}
+                    value={data.email}
                     placeholder="e.g stephenking@lorem.com" 
                     style={{
-                        borderColor: `${emptyEmail ? "red" : "hsl(229, 24%, 87%)"}`
+                        borderColor: `${data.emptyEmail ? "red" : "hsl(229, 24%, 87%)"}`
                     }}
                     onChange={event => updateEmail(event.target.value)}
                     />
@@ -42,15 +81,15 @@ function PersonalInfo({name, email, phone, updateName, updateEmail, updatePhone,
             <div className="input_group">
                 <label htmlFor="phone_number">
                     <strong>Phone Number</strong>
-                    {emptyPhone && <span className="empty_fields">This field is required</span> }
+                    {data.emptyPhone && <span className="empty_fields">This field is required</span> }
                 </label>
                 <input 
                     type="tel" 
                     id="phone_number" 
-                    value={phone}
+                    value={data.phone}
                     placeholder="e.g +1 234 567 890" 
                     style={{
-                        borderColor: `${emptyPhone ? "red" : "hsl(229, 24%, 87%)"}`
+                        borderColor: `${data.emptyPhone ? "red" : "hsl(229, 24%, 87%)"}`
                     }}
                     onChange={event => updatePhone(event.target.value)}
                 />
