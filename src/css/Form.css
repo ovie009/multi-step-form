@@ -18,3 +18,8 @@ form{
 .form_paragraph{
     color: hsl(231, 11%, 63%);
 }   
+
+.active_plan{
+    border-color: hsl(243, 100%, 62%) !important;
+    background-color: hsl(217, 100%, 97%) !important;
+}

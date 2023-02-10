@@ -1,7 +1,7 @@
 import "../css/Form.css";
 import "../css/PersonalInfo.css";
 
-function PersonalInfo({updateName, updateEmail, updatePhone, emptyName, emptyEmail, emptyPhone}) {
+function PersonalInfo({name, email, phone, updateName, updateEmail, updatePhone, emptyName, emptyEmail, emptyPhone}) {
 
     return (
         <>
@@ -15,6 +15,7 @@ function PersonalInfo({updateName, updateEmail, updatePhone, emptyName, emptyEma
                 <input 
                     type="text" 
                     id="name" 
+                    value={name}
                     placeholder="e.g Stephen King"
                     style={{
                         borderColor: `${emptyName ? "red" : "hsl(229, 24%, 87%)"}`
@@ -30,6 +31,7 @@ function PersonalInfo({updateName, updateEmail, updatePhone, emptyName, emptyEma
                 <input 
                     type="email" 
                     id="email" 
+                    value={email}
                     placeholder="e.g stephenking@lorem.com" 
                     style={{
                         borderColor: `${emptyEmail ? "red" : "hsl(229, 24%, 87%)"}`
@@ -45,6 +47,7 @@ function PersonalInfo({updateName, updateEmail, updatePhone, emptyName, emptyEma
                 <input 
                     type="tel" 
                     id="phone_number" 
+                    value={phone}
                     placeholder="e.g +1 234 567 890" 
                     style={{
                         borderColor: `${emptyPhone ? "red" : "hsl(229, 24%, 87%)"}`

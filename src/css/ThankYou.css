@@ -1,0 +1,18 @@
+.thank_you_section{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 30px;
+    justify-content: center;
+    min-height: 350px;
+    text-align: center;
+}
+
+.thank_you_section h2{
+    color: hsl(213, 96%, 18%);
+}
+
+.thank_you_section p{
+    color: hsl(231, 11%, 63%);
+    padding-inline: 20px;
+}

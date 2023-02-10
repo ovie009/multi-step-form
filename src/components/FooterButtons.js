@@ -1,9 +1,10 @@
 
 import "../css/FooterButtons.css"
 
-const FooterButtons = ({step, setStep, name, email, phone, setEmptyName, setEmptyEmail, setEmptyPhone}) => {
+const FooterButtons = ({step, setStep, name, email, phone, setEmptyName, setEmptyEmail, setEmptyPhone, confirm, setConfirm}) => {
 
     const nextStep = () => {
+        setConfirm(false);
         if(step === 1) {
             let emptyFields = false;
             if(name === '') {
@@ -25,14 +26,15 @@ const FooterButtons = ({step, setStep, name, email, phone, setEmptyName, setEmpt
     }
     
     const goBack = () => {
+        setConfirm(false);
         if(step === 1) return setStep(step);
         setStep(prevStep => --prevStep);
     }
 
-    return ( 
+    return !confirm && ( 
         <footer className="footer">
 
-            {step !== 4 ? (<button onClick={nextStep} className="next_button">Next Step</button>) : (<button className="confirm_button">Confirm</button>)}
+            {step !== 4 ? (<button onClick={nextStep} className="next_button">Next Step</button>) : (<button className="confirm_button" onClick={() => setConfirm(true)}>Confirm</button>)}
             
             {step !== 1 ? (<button onClick={goBack} className="back_button">Go Back</button>) : (<></>)}
             

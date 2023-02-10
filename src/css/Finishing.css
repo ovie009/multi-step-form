@@ -1,0 +1,59 @@
+.bill{
+    list-style: none;
+    padding: 20px 10px;
+    background-color: hsl(231, 100%, 99%);
+}
+
+.bill li{
+    display: flex;
+    justify-content: space-between;
+    padding-block: 10px;
+}
+
+.main_bill_wrapper{
+    display: flex;
+    flex-flow: column;
+}
+
+.main_bill_wrapper strong{
+    color: hsl(213, 96%, 18%);
+}
+
+.main_bill_wrapper button{
+    color: hsl(231, 11%, 63%);
+    background-color: none;
+    border: none;
+    width: max-content;
+    text-decoration: underline;
+    background-color: transparent;
+    text-transform: capitalize;
+}
+
+.bill li > strong{
+    font-size: .9em;
+}
+
+.bill li:nth-child(2){
+    border-top: 1px solid hsl(229, 24%, 87%);
+}
+
+.bill li > span {
+    color: hsl(231, 11%, 63%);
+}
+
+.bill li > span {
+    color: hsl(231, 11%, 63%);
+}
+
+.total_wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+.total_wrapper span{
+    color: hsl(231, 11%, 63%);
+}
+
+.total_wrapper strong{
+    color: hsl(243, 100%, 62%);
+}

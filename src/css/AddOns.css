@@ -1,0 +1,41 @@
+.options_wrapper{
+    display: flex;
+    flex-flow: column;
+    gap: 10px;
+}
+
+.option{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    align-items: center;
+    border: 1px solid hsl(229, 24%, 87%);
+}
+
+.option input{
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+}
+
+.option_text_container{
+    display: flex;
+    flex-flow: column;
+    gap: 5px;
+}
+
+.option_text_container strong{
+    font-size: .9em;
+}
+
+.option_text_container span{
+    font-size: .8em;
+    color: hsl(231, 11%, 63%);
+}
+
+.option_price{
+    color: hsl(243, 100%, 62%);
+    font-size: .8em;
+}

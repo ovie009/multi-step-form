@@ -39,11 +39,6 @@
     font-style: normal;
 }
 
-.active_plan{
-    border-color: hsl(243, 100%, 62%) !important;
-    background-color: hsl(217, 100%, 97%) !important;
-}
-
 .toggle_wrapper{
     display: flex;
     justify-content: center;
