@@ -6,23 +6,31 @@ const Sidebar = ({step}) => {
             <ul className="steps">
                 <li>
                     <div className={step === 1 ? "numbering active_number" : "numbering"}>1</div>
-                    <span className="step_label">step 1</span>
-                    <strong>Your Info</strong>
+                    <div className="step_info">
+                        <span className="step_label">step 1</span>
+                        <strong>Your Info</strong>
+                    </div>
                 </li>
                 <li>
                     <div className={step === 2 ? "numbering active_number" : "numbering"}>2</div>
-                    <span className="step_label">step 2</span>
-                    <strong>select plan</strong>
+                    <div className="step_info">
+                        <span className="step_label">step 2</span>
+                        <strong>select plan</strong>
+                    </div>
                 </li>
                 <li>
                     <div className={step === 3 ? "numbering active_number" : "numbering"}>3</div>
-                    <span className="step_label">step 3</span>
-                    <strong>add-ons</strong>
+                    <div className="step_info">
+                        <span className="step_label">step 3</span>
+                        <strong>add-ons</strong>
+                    </div>
                 </li>
                 <li>
                     <div className={step === 4 ? "numbering active_number" : "numbering"}>4</div>
-                    <span className="step_label">step 4</span>
-                    <strong>summant</strong>
+                    <div className="step_info">
+                        <span className="step_label">step 4</span>
+                        <strong>summary</strong>
+                    </div>
                 </li>
             </ul>
         </div>

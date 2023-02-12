@@ -1,5 +1,12 @@
+.form_wrapper{  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 form{
     width: 90%;
+    max-width: 550px;
     background-color: white;
     border-radius: 10px;
     margin-top: -20%;
@@ -22,4 +29,29 @@ form{
 .active_plan{
     border-color: hsl(243, 100%, 62%) !important;
     background-color: hsl(217, 100%, 97%) !important;
+}
+
+/* media query */
+/* media query */
+/* media query */
+@media screen and (min-width: 500px) {
+    form{
+        margin-top: -10%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    form{
+        height: fit-content;
+        margin-top: 0;
+        box-shadow: none;
+    }
+    
+    .form_wrapper{
+        height: 100%;
+        width: 60%;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
+    }
 }

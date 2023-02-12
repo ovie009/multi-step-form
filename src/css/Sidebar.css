@@ -24,11 +24,7 @@
     width: 20px;
 }
 
-.steps li strong{
-    display: none;
-}
-
-.step_label{
+.step_info{
     display: none;
 }
 
@@ -48,4 +44,39 @@
 .active_number{
     color: black;
     background-color: hsl(206, 94%, 87%);
+}
+
+@media screen and (min-width: 1024px) {
+    .sidebar{
+        height: 100%;
+        width: 40%;
+        background-image: url('../assets/images/bg-sidebar-desktop.svg');
+        border-radius: 15px;
+    }
+
+    .step_info{
+        display: flex;
+        gap: 5px;
+        flex-flow: column;
+        text-transform: uppercase;
+        color: white;
+    }    
+
+    .steps{
+        flex-flow: column;
+        padding: 50px 20px;
+        justify-content: flex-start;
+    }
+
+    .steps li{
+        width: 100%;
+        display: flex;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .step_label{
+        font-weight: lighter;
+    }
+
 }

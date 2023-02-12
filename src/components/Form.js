@@ -49,12 +49,14 @@ function Form({step, setStep}) {
     }
 
     return (
-        <>
+        <div className="form_wrapper">
+        { /*<div className="form_wrapper">*/ }
             <form>
                 {displayStep()}
             </form>
             <FooterButtons data={data} setData={setData} step={step} setStep={setStep} />
-        </>
+        {/* </div> */}
+        </div>
 
     );
 }

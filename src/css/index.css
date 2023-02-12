@@ -1,8 +1,11 @@
-body {
-  margin: 0;
+#root{
+    min-height: 100%;
+    width: 100%;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@media screen and (min-width: 1024px) {
+    #root{
+        display: grid;
+        place-items: center;
+    }
 }

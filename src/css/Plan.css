@@ -84,3 +84,17 @@
     transition: .25s ease-in;
     /* transform: translateX(15px);  */
 }
+
+@media screen and (min-width: 1024px) {
+    .plans_wrapper{
+        flex-flow: row;
+        width: 100%;
+        
+    }
+
+    .plans_wrapper button{
+        flex-flow: column;
+        gap: 30px;
+        width: 33%;
+    }
+}

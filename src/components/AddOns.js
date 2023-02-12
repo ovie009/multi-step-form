@@ -38,16 +38,18 @@ const AddOns = ({data, setData}) => {
                     className={data.addOns.online ? "option active_plan" : "option"} 
                     onClick={() => handleOnline(!data.addOns.online)}
                 >
-                    <input 
-                        type="checkbox" 
-                        name="online_service" 
-                        id="online_service"
-                        checked={data.addOns.online} 
-                        onChange={event => handleOnline(event.target.checked)} 
-                    />
-                    <div className="option_text_container">
-                        <strong>Online service</strong>
-                        <span>Access to multiplayer games</span>
+                    <div className="option_container">
+                        <input 
+                            type="checkbox" 
+                            name="online_service" 
+                            id="online_service"
+                            checked={data.addOns.online} 
+                            onChange={event => handleOnline(event.target.checked)} 
+                        />
+                        <div className="option_text_container">
+                            <strong>Online service</strong>
+                            <span>Access to multiplayer games</span>
+                        </div>
                     </div>
                     {data.duration === 'monthly' ? <span className="option_price">+$1/mo</span> : <span className="option_price">+$10/yr</span>}
                     
@@ -56,16 +58,18 @@ const AddOns = ({data, setData}) => {
                     className={data.addOns.storage ? "option active_plan" : "option"}
                     onClick={() => handleStorage(!data.addOns.storage)}
                 >
-                    <input 
-                        type="checkbox" 
-                        name="larger_storage" 
-                        id="larger_storage" 
-                        checked={data.addOns.storage} 
-                        onChange={event => handleStorage(event.target.checked)} 
-                    />
-                    <div className="option_text_container">
-                        <strong>Larger storage</strong>
-                        <span>Extra 1TB of cloud storage</span>
+                    <div className="option_container">
+                        <input 
+                            type="checkbox" 
+                            name="larger_storage" 
+                            id="larger_storage" 
+                            checked={data.addOns.storage} 
+                            onChange={event => handleStorage(event.target.checked)} 
+                        />
+                        <div className="option_text_container">
+                            <strong>Larger storage</strong>
+                            <span>Extra 1TB of cloud storage</span>
+                        </div>
                     </div>
                     {data.duration === 'monthly' ? <span className="option_price">+$2/mo</span> : <span className="option_price">+$20/yr</span>}
                 </div>
@@ -73,16 +77,18 @@ const AddOns = ({data, setData}) => {
                     className={data.addOns.profile ? "option active_plan" : "option"}
                     onClick={() => handleProfile(!data.addOns.profile)}
                 >
-                    <input 
-                        type="checkbox" 
-                        name="customizable_profile" 
-                        id="customizable_profile" 
-                        checked={data.addOns.profile} 
-                        onChange={event => handleProfile(event.target.checked)} 
-                    />
-                    <div className="option_text_container">
-                        <strong>Customizable profile</strong>
-                        <span>Custom theme on your profile</span>
+                    <div className="option_container">
+                        <input 
+                            type="checkbox" 
+                            name="customizable_profile" 
+                            id="customizable_profile" 
+                            checked={data.addOns.profile} 
+                            onChange={event => handleProfile(event.target.checked)} 
+                        />
+                        <div className="option_text_container">
+                            <strong>Customizable profile</strong>
+                            <span>Custom theme on your profile</span>
+                        </div>
                     </div>
                     {data.duration === 'monthly' ? <span className="option_price">+$2/mo</span> : <span className="option_price">+$20/yr</span>}
                 </div>

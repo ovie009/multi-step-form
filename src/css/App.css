@@ -5,10 +5,20 @@
     padding: 0;
     margin: 0;
 }
+  
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+  
 
 body{
     background-color: hsl(217, 100%, 97%);
     font-family: 'Ubuntu', sans-serif;
+    width: 100vw;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
 }
 
 .app{
@@ -19,4 +29,27 @@ body{
 
 button{
     cursor: pointer;
+}
+
+@media screen and (min-width: 1024px) {
+    .app{
+        width: 100vw;
+        height: 90vh;
+        max-width: 800px;
+        max-height: 600px;
+        flex-flow: row;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        border-radius: 15px;
+        padding: 15px;
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .app{
+        max-width: 1000px;
+        max-height: 700px;
+    }
 }
